@@ -1,0 +1,72 @@
+(sqroot 25.0)
+  0: (SQROOT 25.0)
+    1: (TRY 1 25.0)
+      2: (TOLERABLE 1 25.0)
+        3: (SQUARE 1)
+        3: SQUARE returned 1
+        3: (ABSOLUTE -24.0)
+        3: ABSOLUTE returned 24.0
+      2: TOLERABLE returned NIL
+      2: (IMPROVE 1 25.0)
+        3: (AVERAGE 1 25.0)
+        3: AVERAGE returned 13.0
+      2: IMPROVE returned 13.0
+      2: (TRY 13.0 25.0)
+        3: (TOLERABLE 13.0 25.0)
+          4: (SQUARE 13.0)
+          4: SQUARE returned 169.0
+          4: (ABSOLUTE 144.0)
+          4: ABSOLUTE returned 144.0
+        3: TOLERABLE returned NIL
+        3: (IMPROVE 13.0 25.0)
+          4: (AVERAGE 13.0 1.9230769)
+          4: AVERAGE returned 7.4615383
+        3: IMPROVE returned 7.4615383
+        3: (TRY 7.4615383 25.0)
+          4: (TOLERABLE 7.4615383 25.0)
+            5: (SQUARE 7.4615383)
+            5: SQUARE returned 55.674553
+            5: (ABSOLUTE 30.674553)
+            5: ABSOLUTE returned 30.674553
+          4: TOLERABLE returned NIL
+          4: (IMPROVE 7.4615383 25.0)
+            5: (AVERAGE 7.4615383 3.3505156)
+            5: AVERAGE returned 5.406027
+          4: IMPROVE returned 5.406027
+          4: (TRY 5.406027 25.0)
+            5: (TOLERABLE 5.406027 25.0)
+              6: (SQUARE 5.406027)
+              6: SQUARE returned 29.225126
+              6: (ABSOLUTE 4.2251263)
+              6: ABSOLUTE returned 4.2251263
+            5: TOLERABLE returned NIL
+            5: (IMPROVE 5.406027 25.0)
+              6: (AVERAGE 5.406027 4.6244683)
+              6: AVERAGE returned 5.0152473
+            5: IMPROVE returned 5.0152473
+            5: (TRY 5.0152473 25.0)
+              6: (TOLERABLE 5.0152473 25.0)
+                7: (SQUARE 5.0152473)
+                7: SQUARE returned 25.152706
+                7: (ABSOLUTE 0.15270615)
+                7: ABSOLUTE returned 0.15270615
+              6: TOLERABLE returned NIL
+              6: (IMPROVE 5.0152473 25.0)
+                7: (AVERAGE 5.0152473 4.984799)
+                7: AVERAGE returned 5.000023
+              6: IMPROVE returned 5.000023
+              6: (TRY 5.000023 25.0)
+                7: (TOLERABLE 5.000023 25.0)
+                  8: (SQUARE 5.000023)
+                  8: SQUARE returned 25.000229
+                  8: (ABSOLUTE 2.2888184e-4)
+                  8: ABSOLUTE returned 2.2888184e-4
+                7: TOLERABLE returned T
+              6: TRY returned 5.000023
+            5: TRY returned 5.000023
+          4: TRY returned 5.000023
+        3: TRY returned 5.000023
+      2: TRY returned 5.000023
+    1: TRY returned 5.000023
+  0: SQROOT returned 5.000023
+5.000023
