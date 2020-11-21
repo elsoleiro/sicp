@@ -1,4 +1,3 @@
-(sqroot 25.0)
   0: (SQROOT 25.0)
     1: (TRY 1 25.0)
       2: (TOLERABLE 1 25.0)
@@ -70,3 +69,85 @@
     1: TRY returned 5.000023
   0: SQROOT returned 5.000023
 5.000023
+
+  0: (SQROOT 2)
+    1: (TRY 1 2)
+      2: (TOLERABLE 1 2)
+        3: (SQUARE 1)
+        3: SQUARE returned 1
+      2: TOLERABLE returned NIL
+      2: (IMPROVE 1 2)
+        3: (AVERAGE 1 2)
+        3: AVERAGE returned 3/2
+      2: IMPROVE returned 3/2
+      2: (TRY 3/2 2)
+        3: (TOLERABLE 3/2 2)
+          4: (SQUARE 3/2)
+          4: SQUARE returned 9/4
+        3: TOLERABLE returned NIL
+        3: (IMPROVE 3/2 2)
+          4: (AVERAGE 3/2 4/3)
+          4: AVERAGE returned 17/12
+        3: IMPROVE returned 17/12
+        3: (TRY 17/12 2)
+          4: (TOLERABLE 17/12 2)
+            5: (SQUARE 17/12)
+            5: SQUARE returned 289/144
+          4: TOLERABLE returned NIL
+          4: (IMPROVE 17/12 2)
+            5: (AVERAGE 17/12 24/17)
+            5: AVERAGE returned 577/408
+          4: IMPROVE returned 577/408
+          4: (TRY 577/408 2)
+            5: (TOLERABLE 577/408 2)
+              6: (SQUARE 577/408)
+              6: SQUARE returned 332929/166464
+            5: TOLERABLE returned T
+          4: TRY returned 577/408
+        3: TRY returned 577/408
+      2: TRY returned 577/408
+    1: TRY returned 577/408
+  0: SQROOT returned 577/408
+
+577/408
+0[4] (sqroot 2.0)
+  0: (SQROOT 2.0)
+    1: (TRY 1 2.0)
+      2: (TOLERABLE 1 2.0)
+        3: (SQUARE 1)
+        3: SQUARE returned 1
+      2: TOLERABLE returned NIL
+      2: (IMPROVE 1 2.0)
+        3: (AVERAGE 1 2.0)
+        3: AVERAGE returned 1.5
+      2: IMPROVE returned 1.5
+      2: (TRY 1.5 2.0)
+        3: (TOLERABLE 1.5 2.0)
+          4: (SQUARE 1.5)
+          4: SQUARE returned 2.25
+        3: TOLERABLE returned NIL
+        3: (IMPROVE 1.5 2.0)
+          4: (AVERAGE 1.5 1.3333334)
+          4: AVERAGE returned 1.4166667
+        3: IMPROVE returned 1.4166667
+        3: (TRY 1.4166667 2.0)
+          4: (TOLERABLE 1.4166667 2.0)
+            5: (SQUARE 1.4166667)
+            5: SQUARE returned 2.0069447
+          4: TOLERABLE returned NIL
+          4: (IMPROVE 1.4166667 2.0)
+            5: (AVERAGE 1.4166667 1.4117646)
+            5: AVERAGE returned 1.4142157
+          4: IMPROVE returned 1.4142157
+          4: (TRY 1.4142157 2.0)
+            5: (TOLERABLE 1.4142157 2.0)
+              6: (SQUARE 1.4142157)
+              6: SQUARE returned 2.000006
+            5: TOLERABLE returned T
+          4: TRY returned 1.4142157
+        3: TRY returned 1.4142157
+      2: TRY returned 1.4142157
+    1: TRY returned 1.4142157
+  0: SQROOT returned 1.4142157
+
+1.4142157
