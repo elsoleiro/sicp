@@ -19,11 +19,10 @@
 
 (defun try (guess x) ; two formal params of integers
     (if (tolerable guess x) ; if the result of tolerable on guess & x is true, return guess, else, invoke try on the result of improve & guess and x
-        guess
+        guess ; base case ?
         (try (improve guess x) x))) ; else, invoke improve on (guess & x) then invoke try on the result of improve and x
 
-(defun sqroot (x)
-    (try 1 x))
+(defun sqroot (x) ; formal param of one integer
+    (try 1 x)) ; begin recursion
 
-(write (sqroot 25.0))
 
