@@ -70,7 +70,7 @@ Sum squares:
 
 Leibnitz (for finding pi over 8):
 
-```lisp
+```scheme
 (define (pi-sum a b)
     (sum (lambda (i) (/ 1 (* i (+ 1 2))))
           a
