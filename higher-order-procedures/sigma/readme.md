@@ -7,7 +7,7 @@
             (sum-ints (1+ a) b))))
 ```
 ---
-![alt text](gif(1).gif)
+![alt text](gif (1).gif)
 ```lisp
 (define (sqs x)
     (* x x))
