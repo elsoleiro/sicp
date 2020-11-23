@@ -1,5 +1,5 @@
 ![alt text](gif.gif)
-```lisp
+```scheme
 (define (sum-ints a b)
     (if (> a b)
         0
@@ -7,20 +7,20 @@
             (sum-ints (1+ a) b))))
 ```
 ---
-![alt text](gif (1).gif)
-```lisp
-(define (sqs x)
+![alt text](gif2.gif)
+```scheme
+(define (square x)
     (* x x))
 
-(define (sumsqs a b)
+(define (sum-squares s a b)
     (if (> a b)
         0
-        (+ (sqs a)
-            (sumsqs (1+ a) b))))
+        (+ (square a)
+            (sum-sqaures (1+ a) b))))
 ```
 ---
 ![alt text](leibnitz.gif)
-```lisp
+```scheme
 (define (pi-sum a b)
     (if (> a b)
         0
@@ -41,7 +41,7 @@ Note the general pattern:
 
 Encapsulation of said pattern by higher order function:
 
-```lisp
+```scheme
 (define (sum term a next b) ; take 4 args term and next are not numbers, these are procedures
     (if (> a b)
         0
@@ -55,7 +55,7 @@ Encapsulation of said pattern by higher order function:
 
 Sum integers:
 
-```lisp
+```scheme
 (define (sum-int a b)
     (define (identity x) x)
     (sum identity a 1+ b))
@@ -63,14 +63,14 @@ Sum integers:
 
 Sum squares:
 
-```lisp
-(define (sumSquares a b)
+```scheme
+(define (sum-squares a b)
     (sum sqs a 1+ b))
 ```
 
 Leibnitz (for finding pi over 8):
 
-```lisp
+```scheme
 (define (pi-sum a b)
     (sum (lambda (i) (/ 1 (* i (+ 1 2))))
           a
