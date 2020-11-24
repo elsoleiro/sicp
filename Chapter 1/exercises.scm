@@ -13,17 +13,19 @@
 ; 1.3 -- revisit this with some (more) original thought
 (display "\n")
 
-(define square
-   (lambda (a b c)
-      (+ (* a a) (* b b) (* c c))))
+(define (square a b c)
+      (+ (* a a) (* b b) (* c c)))
 
-(define (smallest a b c)
+(define (smallest? a b c)
    (cond ((and (<= a b) (<= a c)) (* a a))
          ((and (<= b a) (<= b c)) (* b b))
-         ((and (<= c a) (<= c b)) (* c c))))
+         (else (* c c))))
+
 (define (answer a b c)
    (- (square a b c)
-      (smallest a b c)))
+      (smallest? a b c)))
+
+(write (answer 1 2 3))
 
 
 
