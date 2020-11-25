@@ -25,7 +25,17 @@
    (- (square a b c)
       (smallest? a b c)))
 
-(write (answer 1 2 3))
+; 1.4
+(define (a-plus-abs-b a b)
+   ((if (> b 0) + -) a b))
+; this function returns a + the absolute value of b
+; remember, if (cond) true false, expanded as:
+(define (a-plus-abs-b a b)
+   (if (> b 0)
+       (+ a b)
+       (- a b)))
+; so what we're looking at is "a + |b|"
+
 
 
 
