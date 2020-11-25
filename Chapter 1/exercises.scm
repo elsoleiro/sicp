@@ -36,6 +36,27 @@
        (- a b)))
 ; so what we're looking at is "a + |b|"
 
+; 1.5
+
+; normal applicative order evaluates all of the arguments first, hence "outside-in", whilst applicative order would only evaluate when required.
+
+(define (p) (p)) ; a procedure that only returns itself.
+
+(define (test a b)
+   (if (= a 0)
+          0
+          b))
+
+; invoked with (test 0 (p)).
+#|
+if a redex is a reductible function expression, normal order evaluation can be said to evaluate the left most redex first.
+therefore, normal order evaluation would evaluate the predicate to the if and then immediately return the consequent, never needing to evaluate
+the right-most argument (p)
+
+conversely, applicative order evaluate would evaluate the 0, then invoke (p), resulting in a loop.
+
+remember, loosely, that functions in scheme are evaluated in applicative order and builtins tend to be evaluated in normal order.
+|#
 
 
 
