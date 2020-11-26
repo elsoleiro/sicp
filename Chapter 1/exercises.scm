@@ -38,7 +38,7 @@
 
 ; 1.5
 
-; normal applicative order evaluates all of the arguments first, hence "outside-in", whilst applicative order would only evaluate when required.
+; normal order evaluates all of the arguments first, hence "outside-in", whilst applicative order would only evaluate when required.
 
 (define (p) (p)) ; a procedure that only returns itself.
 
@@ -46,6 +46,11 @@
    (if (= a 0)
           0
           b))
+
+<3, 9>
++
+<4, 7>
+
 
 ; invoked with (test 0 (p)).
 #|
@@ -57,6 +62,7 @@ conversely, applicative order evaluate would evaluate the 0, then invoke (p), re
 
 remember, loosely, that functions in scheme are evaluated in applicative order and builtins tend to be evaluated in normal order.
 |#
+
 
 
 

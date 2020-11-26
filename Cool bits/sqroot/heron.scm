@@ -24,6 +24,6 @@
 
 (define (sqroot x) (try 1 x))
 
-(write (sqroot 25.0))
+(write (sqroot 2.0))
 
 
