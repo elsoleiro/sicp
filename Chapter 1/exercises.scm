@@ -63,7 +63,12 @@ conversely, applicative order evaluate would evaluate the 0, then invoke (p), re
 remember, loosely, that functions in scheme are evaluated in applicative order and builtins tend to be evaluated in normal order.
 |#
 
+#|
+usually, we give predicates names ending wqith question marks.
+|#
 
+; 1.6
 
-
-
+(define (new-if predicate then-clause else-clause) 
+   (cond (predicate then-clause)
+         (else else-clause)))
