@@ -47,10 +47,6 @@
           0
           b))
 
-<3, 9>
-+
-<4, 7>
-
 
 ; invoked with (test 0 (p)).
 #|
@@ -66,9 +62,44 @@ remember, loosely, that functions in scheme are evaluated in applicative order a
 #|
 usually, we give predicates names ending wqith question marks.
 |#
-
 ; 1.6
+
 
 (define (new-if predicate then-clause else-clause) 
    (cond (predicate then-clause)
          (else else-clause)))
+
+; on
+
+(define (sqrt-iter guess x)
+   (new-if (good-enough? guess x)
+            guess
+            (sqrt-iter (improve guess x)
+                        x)))
+
+(define (try a)
+   (if (= a 0) 1 (/ 1 0)))
+            
+#|
+if is a special form, if evaluates the predicate and then evaluates the 
+consequent if the predicate evaluates to true, or the alternative if
+the predicate evaluates to false. new if is a procedure, therefore
+under applicative order evaluation, all of it's arguments will be evaluated
+before the procedure is started. 
+
+therefore, the recursive call to sqrt-iter will always be evaluated. 
+
+page 22: ".. there is a special form in Lisp for notating such case analysis
+it is called cond.."
+
+page 23: "This process continues until a predicate is found whose value is true,
+in which case the interpreter returns the value of the corresponding consequent
+expression"
+
+page 24: "to evaluate an if expression, the interpreter starts by evaluating
+the <p> part of the expression, if <p> evaluates to a true value, the interpreter
+then evaluates <c> and returns its value."
+
+states the interpreter evaluates the consequent <if and only if> its corresponding
+predicate is true
+|#
